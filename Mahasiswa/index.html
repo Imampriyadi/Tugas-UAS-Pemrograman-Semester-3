@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pilihan Mata Kuliah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Input Pilihan Mata Kuliah</h2>
+        <form action="process.php" method="post">
+            <label for="mahasiswa">Mahasiswa:</label>
+            <input type="text" name="mahasiswa" id="mahasiswa" required>
+
+            <br>
+
+            <label for="matkul">Mata Kuliah:</label>
+            <select name="matkul" id="matkul">
+                <!-- Pilihan Mata Kuliah akan diambil dari database atau hardcoded sesuai kebutuhan -->
+                <option value="Pilih------"></option>
+                <option value="Matematika Dasar">Matematika Dasar</option>
+                <option value="Pemrograman Web">Pemrograman Web</option>
+                <option value="Basis Data">Basis Data</option>
+                <option value="Bahasa Inggris">Bahasa Inggris</option>
+            </select>
+
+            <br>
+
+            <label for="jml_sks">Jumlah SKS:</label>
+            <input type="number" name="jml_sks" id="jml_sks" min="1" max="50" required>
+
+            <br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
